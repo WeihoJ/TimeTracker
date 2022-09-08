@@ -1,0 +1,237 @@
+* {
+    /* primary */
+    --blue: hsl(246, 80%, 60%);
+    --light-peach: hsl(15, 100%, 70%);
+    --soft-blue: hsl(195, 74%, 62%);
+    --light-red: hsl(348, 100%, 68%);
+    --lime-green: hsl(145, 58%, 55%);
+    --violet: hsl(264, 64%, 52%);
+    --soft-orange: hsl(43, 84%, 65%);
+
+    /* Neutral */
+    --very-dark-blue: hsl(226, 43%, 10%);
+    --dark-blue: hsl(235, 46%, 20%);
+    --blue-hover: #34397b;
+    --desaturated-blue: hsl(235, 45%, 61%);
+    --pale-blue: hsl(236, 100%, 87%);
+}
+
+body {
+    background-color: var(--very-dark-blue);
+}
+
+p,
+h2,
+span {
+    font-family: 'Rubik', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.sect .top .icon {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 15px;
+    top: -5px;
+}
+
+.sect {
+    position: relative;
+    flex-direction: column;
+    width: 225px;
+    height: 225px;
+    overflow: hidden;
+}
+
+.sect .top,
+.sect .bottom {
+    border-radius: 10px;
+}
+
+.sect .top {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* width: 225px;
+    height: 225px; */
+}
+
+.sect .bottom {
+    position: absolute;
+    background-color: var(--dark-blue);
+    width: 100%;
+    height: 80%;
+    /* width: 225px;
+    height: 175px; */
+    /* Mio Julkunen */
+    bottom: 0px;
+}
+
+.sect .bottom:hover {
+    background-color: var(--blue-hover);
+}
+
+.sect .bottom span {
+    color: var(--pale-blue);
+    width: 100%;
+    font-size: 15px;
+}
+
+.sect .bottom h2 {
+    padding: 0 25px;
+    width: calc(100% - 50px);
+}
+
+.sect .bottom .selection {
+    padding: 25px;
+    width: calc(100% - 50px);
+}
+
+.sect .work {
+    background-color: var(--light-peach);
+}
+
+.sect .play {
+    background-color: var(--soft-blue);
+}
+
+.sect .study {
+    background-color: var(--light-red);
+}
+
+.sect .exercise {
+    background-color: var(--lime-green);
+}
+
+.sect .social {
+    background-color: var(--violet);
+}
+
+.sect .self-care {
+    background-color: var(--soft-orange);
+}
+
+.sect .bottom .bottom-spacer {
+    width: calc(100% - 50px);
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    height: 25px;
+}
+
+.sect .bottom .bottom-spacer .info-menu {
+    transform: translateY(-15px);
+}
+
+.info-menu {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.main {
+    position: relative;
+}
+
+.main .top {
+    position: absolute;
+    background-color: var(--blue);
+    width: calc(100% - 50px);
+    height: calc(70% - 50px);
+    border-radius: 10px;
+    padding: 25px;
+    z-index: 10;
+}
+
+.main .top h2 {
+    width: 100%;
+    font-size: 40px;
+    font-weight: 300;
+}
+
+.main .top p {
+    color: var(--pale-blue);
+    width: 100%;
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 30px;
+}
+
+.main .bottom {
+    position: absolute;
+    background-color: var(--dark-blue);
+    width: 100%;
+    height: 100%;
+    /* z-index: -1; */
+    border-radius: 10px;
+}
+
+.main .bottom p {
+    font-size: 18px;
+}
+
+.main .bottom .selector {
+    position: absolute;
+    top: 70%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc(100% - 50px);
+    height: calc(30% - 50px);
+    padding: 25px;
+}
+
+.main .bottom .selector p {
+    color: var(--pale-blue);
+}
+
+.main .bottom .selector p:hover {
+    cursor: pointer;
+    color: white;
+}
+
+.main .bottom .selector .active {
+    color: white;
+}
+
+.sect .bottom .selection .disabled {
+    display: none;
+}
+
+.sect .bottom .selection .active {
+    display: block;
+}
+
+.main .top img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(4, 225px);
+    grid-template-rows: repeat(2, 225px);
+}
+
+.grid-item-1 {
+    grid-row: span 2;
+}
+
+main {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+}
